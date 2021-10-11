@@ -9,11 +9,11 @@ namespace KataGildedRose.Tests
 {
     public class GildedRoseShould
     {
-        
+
         [Test]
-        public void decrease_by_one_the_normal_item_quality()
+        public void decrease_by_one_the_normal_item_quality_and_sellIn()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Normal item", SellIn = 5, Quality = 2 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 5, Quality = 2}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -25,7 +25,7 @@ namespace KataGildedRose.Tests
         [Test]
         public void dont_decrease_quality_below_zero()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Normal item", SellIn = 5, Quality = 0 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 5, Quality = 0}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -37,7 +37,7 @@ namespace KataGildedRose.Tests
         [Test]
         public void decrease_quality_twice_when_sellIn_is_zero()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Normal item", SellIn = 0, Quality = 12 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 0, Quality = 12}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -49,7 +49,7 @@ namespace KataGildedRose.Tests
         [Test]
         public void increase_by_one_the_aged_brie_item_quality()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 8, Quality = 10 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 8, Quality = 10}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -61,7 +61,7 @@ namespace KataGildedRose.Tests
         [Test]
         public void increase_by_two_when_aged_brie_sellIn_is_zero()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 0, Quality = 10 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 0, Quality = 10}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -71,9 +71,21 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
+        public void increase_by_two_when_aged_brie_quality_and_sellIn_is_in_limit()
+        {
+            IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 0, Quality = 49}};
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(-1);
+            Items.First().Quality.Should().Be(50);
+        }
+
+        [Test]
         public void dont_increase_the_quality_above_50()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = 8, Quality = 50 } };
+            IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 8, Quality = 50}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -85,7 +97,8 @@ namespace KataGildedRose.Tests
         [Test]
         public void dont_change_sulfuras_sellIn_and_quality_parameters()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 8, Quality = 80 } };
+            IList<Item> Items = new List<Item>
+                {new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 8, Quality = 80}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -97,7 +110,8 @@ namespace KataGildedRose.Tests
         [Test]
         public void increase_backstage_pass_quality_by_two_when_sellIn_is_less_than_ten()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 8, Quality = 30 } };
+            IList<Item> Items = new List<Item>
+                {new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 8, Quality = 30}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -109,7 +123,8 @@ namespace KataGildedRose.Tests
         [Test]
         public void increase_backstage_pass_quality_by_three_when_sellIn_is_less_than_five()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 17 } };
+            IList<Item> Items = new List<Item>
+                {new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 17}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -121,7 +136,8 @@ namespace KataGildedRose.Tests
         [Test]
         public void decrease_backstage_pass_quality_to_zero_when_sellIn_is_zero()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 30 } };
+            IList<Item> Items = new List<Item>
+                {new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 30}};
             var app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -130,5 +146,16 @@ namespace KataGildedRose.Tests
             Items.First().Quality.Should().Be(0);
         }
 
+        [Test]
+        public void increase_by_one_when_sellIn_goes_to_0_in_aged_brie()
+        {
+            IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 1, Quality = 45}};
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(0);
+            Items.First().Quality.Should().Be(46);
+        }
     }
 }
