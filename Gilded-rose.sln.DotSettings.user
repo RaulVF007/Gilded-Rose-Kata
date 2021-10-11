@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5d8da840_002D2bfd_002D424a_002D8c93_002D36d01490793a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="decrease_by_one_the_quality" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.decrease_by_one_the_normal_item_quality&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.increase_by_one_the_aged_brie_item_quality&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.dont_increase_the_quality_above_50&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.dont_change_sulfuras_sellIn_and_quality&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.increase_backstage_pass_quality&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.increase_backstage_pass_quality_by_three_when_sellIn_is_less_than_five&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.decrease_backstage_pass_quality_to_zero_when_sellIn_is_zero&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.decrease_quality_twice_when_sellIn_is_zero&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.dont_decrease_quality_below_zero&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::98733EA9-0427-4413-A622-2B4FB61E784F::.NETCoreApp,Version=v3.1::KataGildedRose.Tests.GildedRoseShould.increase_by_two_when_aged_brie_sellIn_is_zero&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
