@@ -14,8 +14,14 @@
                 "Aged Brie" => MakeBrieItem(item.Quality, item.SellIn),
                 "Sulfuras, Hand of Ragnaros" => MakeLegendaryItem(item.Quality, item.SellIn),
                 "Backstage passes to a TAFKAL80ETC concert" => BackstageItem(item.Quality, item.SellIn),
+                "Conjured" => MakeConjuredItem(item.Quality,item.SellIn),
                 _ => NormalItem(item.Quality, item.SellIn)
             };
+        }
+
+        private ConjuredItem MakeConjuredItem(int itemQuality, int itemSellIn)
+        {
+            return new ConjuredItem(itemQuality,itemSellIn);
         }
 
         public BrieItem MakeBrieItem(int quality, int sellIn)
