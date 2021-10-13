@@ -35,7 +35,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void decrease_normal_item_quality_twice_when_sellIn_is_zero()
+        public void decrease_normal_item_quality_twice_when_sellIn_is_dropped()
         {
             IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 0, Quality = 12}};
             var app = new GildedRose(Items);
@@ -59,7 +59,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void increase_by_two_when_aged_brie_sellIn_is_zero()
+        public void increase_by_two_when_aged_brie_sellIn_is_dropped()
         {
             IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 0, Quality = 10}};
             var app = new GildedRose(Items);
@@ -134,7 +134,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void decrease_backstage_pass_quality_to_zero_when_sellIn_is_zero()
+        public void decrease_backstage_pass_quality_to_zero_when_sellIn_is_dropped()
         {
             IList<Item> Items = new List<Item>
                 {new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 30}};
@@ -147,7 +147,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void increase_by_one_when_sellIn_goes_to_0_in_aged_brie()
+        public void increase_by_one_when_sellIn_is_dropped_in_aged_brie()
         {
             IList<Item> Items = new List<Item> {new Item {Name = "Aged Brie", SellIn = 1, Quality = 45}};
             var app = new GildedRose(Items);
