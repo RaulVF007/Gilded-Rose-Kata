@@ -18,7 +18,12 @@ namespace Gilded_rose.ItemsFolder
             {
                 Quality -= (Quality == 1) ? 1 : 0;
                 Quality -= (Quality >= 2) ? 2 : 0;
+
+            }else{
+                Quality -= (Quality < 4) ? Quality : 0;
+                Quality -= (Quality >= 4) ? 4 : 0;
             }
+
         }
 
         private void UpdateSellIn()
