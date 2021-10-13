@@ -18,8 +18,8 @@ namespace KataGildedRose.Tests
 
             app.UpdateQuality();
 
-            Items.First().SellIn.Should().Be(4);
             Items.First().Quality.Should().Be(1);
+            Items.First().SellIn.Should().Be(4);
         }
 
         [Test]
