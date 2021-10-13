@@ -17,12 +17,12 @@
         {
         }
 
-        public int getUpdatedQuality()
+        public int GetUpdatedQuality()
         {
             return Quality;
         }
 
-        public int getUpdatedSellIn()
+        public int GetUpdatedSellIn()
         {
             return SellIn;
         }

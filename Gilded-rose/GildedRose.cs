@@ -6,7 +6,7 @@ namespace Gilded_rose
 {
     public class GildedRose
     {
-        private ItemFactory itemFactory = new ItemFactory();
+        private ItemsFactory itemFactory = ItemsFactory.Instance;
         public IList<Item> Items;
 
         public GildedRose(IList<Item> Items)
@@ -18,15 +18,9 @@ namespace Gilded_rose
         {
             foreach (var item in Items)
             {
-                var itemFromFactory = itemFactory.createItem(item);
-                UpdateItemValues(item, itemFromFactory);
+                item.Quality = itemFactory.GetInstanceFromExistentItem(item).GetUpdatedQuality();
+                item.SellIn = itemFactory.GetInstanceFromExistentItem(item).GetUpdatedSellIn();
             }
-        }
-
-        private void UpdateItemValues(Item item, IItem itemFromFactory)
-        {
-            item.Quality = itemFromFactory.getUpdatedQuality();
-            item.SellIn = itemFromFactory.getUpdatedSellIn();
         }
     }
 
@@ -37,9 +31,5 @@ namespace Gilded_rose
         public int SellIn { get; set; }
 
         public int Quality { get; set; }
-    }
-    internal interface IAbstractFactory
-    {
-        public IItem createItem(Item item);
     }
 }

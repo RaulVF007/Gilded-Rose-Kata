@@ -5,7 +5,7 @@
         void UpdateQuality();
         void UpdateSellIn();
 
-        int getUpdatedQuality();
-        int getUpdatedSellIn();
+        int GetUpdatedQuality();
+        int GetUpdatedSellIn();
     }
 }

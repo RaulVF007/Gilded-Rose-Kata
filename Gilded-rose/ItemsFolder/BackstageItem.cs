@@ -21,13 +21,13 @@
             SellIn--;
         }
 
-        public int getUpdatedQuality()
+        public int GetUpdatedQuality()
         {
             UpdateQuality();
             return Quality;
         }
 
-        public int getUpdatedSellIn()
+        public int GetUpdatedSellIn()
         {
             UpdateSellIn();
             return SellIn;
