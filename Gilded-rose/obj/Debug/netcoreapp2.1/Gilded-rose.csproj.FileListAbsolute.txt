@@ -1,0 +1,10 @@
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\bin\Debug\netcoreapp2.1\Gilded-rose.deps.json
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\bin\Debug\netcoreapp2.1\Gilded-rose.dll
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\bin\Debug\netcoreapp2.1\Gilded-rose.pdb
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.csproj.AssemblyReference.cache
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.AssemblyInfoInputs.cache
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.AssemblyInfo.cs
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.csproj.CoreCompileInputs.cache
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.dll
+C:\Users\rvega\Documents\repos\GildedRoseKata\Gilded-rose\obj\Debug\netcoreapp2.1\Gilded-rose.pdb
