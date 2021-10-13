@@ -23,7 +23,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void dont_decrease_quality_below_zero()
+        public void dont_decrease_normal_item_quality_below_zero()
         {
             IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 5, Quality = 0}};
             var app = new GildedRose(Items);
@@ -168,6 +168,18 @@ namespace KataGildedRose.Tests
 
             Items.First().Quality.Should().Be(1);
             Items.First().SellIn.Should().Be(4);
+        }
+
+        [Test]
+        public void dont_decrease_conjured_item_quality_below_zero()
+        {
+            IList<Item> Items = new List<Item> {new Item {Name = "Conjured", SellIn = 5, Quality = 1}};
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(4);
+            Items.First().Quality.Should().Be(0);
         }
     }
 }
