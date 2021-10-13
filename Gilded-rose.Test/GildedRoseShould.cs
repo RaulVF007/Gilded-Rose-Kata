@@ -35,7 +35,7 @@ namespace KataGildedRose.Tests
         }
 
         [Test]
-        public void decrease_quality_twice_when_sellIn_is_zero()
+        public void decrease_normal_item_quality_twice_when_sellIn_is_zero()
         {
             IList<Item> Items = new List<Item> {new Item {Name = "Normal item", SellIn = 0, Quality = 12}};
             var app = new GildedRose(Items);
@@ -180,6 +180,18 @@ namespace KataGildedRose.Tests
 
             Items.First().SellIn.Should().Be(4);
             Items.First().Quality.Should().Be(0);
+        }
+
+        [Test]
+        public void decrease_conjured_item_quality_four_times_when_sellIn_is_dropped()
+        {
+            IList<Item> Items = new List<Item> { new Item { Name = "Conjured", SellIn = -1, Quality = 30 } };
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().SellIn.Should().Be(-2);
+            Items.First().Quality.Should().Be(26);
         }
     }
 }
