@@ -157,5 +157,17 @@ namespace KataGildedRose.Tests
             Items.First().SellIn.Should().Be(0);
             Items.First().Quality.Should().Be(46);
         }
+
+        [Test]
+        public void decrease_twice_as_fast_when_item_is_conjured()
+        {
+            IList<Item> Items = new List<Item> {new Item {Name = "Conjured", SellIn = 5, Quality = 3}};
+            var app = new GildedRose(Items);
+
+            app.UpdateQuality();
+
+            Items.First().Quality.Should().Be(1);
+            Items.First().SellIn.Should().Be(4);
+        }
     }
 }
