@@ -8,7 +8,7 @@
             SellIn = sellIn;
         }
 
-        public void UpdateQuality()
+        private void UpdateQuality()
         {
             Quality += (SellIn > 10) ? 1 : 0;
             Quality += (SellIn > 5 && SellIn <= 10) ? 2 : 0;
@@ -16,7 +16,7 @@
             Quality = (SellIn <= 0) ? 0 : Quality;
         }
 
-        public void UpdateSellIn()
+        private void UpdateSellIn()
         {
             SellIn--;
         }

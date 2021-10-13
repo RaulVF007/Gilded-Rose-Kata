@@ -8,12 +8,12 @@
             this.SellIn = itemSellIn;
         }
 
-        public void UpdateQuality()
+        private void UpdateQuality()
         {
 
         }
 
-        public void UpdateSellIn()
+        private void UpdateSellIn()
         {
         }
 
