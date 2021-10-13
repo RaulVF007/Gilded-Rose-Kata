@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Gilded_rose
+﻿namespace Gilded_rose.ItemsFolder
 {
     class NormalItem : Item, IItem
     {

@@ -1,4 +1,4 @@
-﻿namespace Gilded_rose
+﻿namespace Gilded_rose.ItemsFolder
 {
     class LegendaryItem : Item, IItem
     {

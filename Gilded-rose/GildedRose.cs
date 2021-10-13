@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Gilded_rose.ItemsFolder;
 
 namespace Gilded_rose
 {
